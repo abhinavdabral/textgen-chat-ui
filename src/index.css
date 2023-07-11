@@ -140,3 +140,14 @@ justify-content: space-between;
   /* border: 1px solid white; */
 }
 
+.keycap {
+  display: inline-flex;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  font-size: 1.25em;
+  border-radius: 4px;
+}

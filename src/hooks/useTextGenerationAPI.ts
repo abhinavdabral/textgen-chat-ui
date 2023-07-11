@@ -69,7 +69,8 @@ export const useTextGenerationAPI = () => {
   return {
     sendMessage,
     history,
-    isLoading: isLoading || !isConnected,
+    isLoading,
+    isConnected,
     isStreaming,
     resetHistory,
   };

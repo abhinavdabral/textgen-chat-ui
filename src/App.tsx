@@ -4,8 +4,14 @@ import { useTextGenerationAPI } from "./hooks/useTextGenerationAPI";
 function App() {
   const endOfConversation = useRef<HTMLDivElement | null>(null);
   const textbox = useRef<HTMLTextAreaElement | null>(null);
-  const { sendMessage, isLoading, isStreaming, history, resetHistory } =
-    useTextGenerationAPI();
+  const {
+    sendMessage,
+    isConnected,
+    isLoading,
+    isStreaming,
+    history,
+    resetHistory,
+  } = useTextGenerationAPI();
   const handleSubmit = () => {
     if (textbox.current) {
       const text = textbox.current.value;
@@ -50,6 +56,13 @@ function App() {
               <div className="loading">Bot is typing ...</div>
             </div>
           )}
+          {!isConnected && (
+            <div className="conversation">
+              <div className="loading">
+                Disconnected from the server. Please refresh.
+              </div>
+            </div>
+          )}
           <div ref={endOfConversation}>&nbsp;</div>
         </div>
       </div>
@@ -71,10 +84,10 @@ function App() {
         ></textarea>
         <button
           className="btn-send"
-          disabled={isLoading || isStreaming}
+          disabled={isLoading || isStreaming || !isConnected}
           onClick={handleSubmit}
         >
-          Send (Enter)
+          Send <span className="keycap">↵</span>
         </button>
       </div>
     </div>
