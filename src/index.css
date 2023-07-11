@@ -1,0 +1,142 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c20;
+}
+
+* {
+  font-family: Roboto;
+  color: white;
+  font-size: 16px;
+}
+
+.prompt-text {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 8px;
+  flex: 1;
+  max-height: 400px;
+}
+
+.btn-send, .btn-send:enabled, .btn-clear, .btn-clear:enabled {
+  border: 0px none;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+  font-weight: bold;
+  transition: all ease 300ms;
+}
+
+.btn-send:disabled, .btn-clear:disabled {
+  background-color: dimgray;
+}
+
+.btn-send {
+  background-color:mediumseagreen;
+  margin-left: 24px;
+
+  padding: 0px 16px;
+
+}
+
+.btn-send:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-clear {
+  background-color:coral;
+
+  margin-right: 12px;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.btn-clear:hover {
+  background-color: white;
+  color: black;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 1000px;
+  padding: 12px;
+}
+
+.history-container {
+  color: white;
+  flex: 1;
+  overflow-y: auto;
+  width: 90vw;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* border: 1px solid white */
+}
+
+.scrollable {
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 0px 12px;
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+}
+
+.sent, .receive {
+  margin-bottom: 8px;
+  max-width: 70%;
+  border-radius: 8px;
+  padding:12px 8px;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: dodgerblue ;
+  /* border: 1px solid white; */
+  text-align: right;
+  flex: 1 0 0;
+}
+
+.receive {
+  align-self: flex-start;
+  flex: 1 0 0;
+  background-color: #333333;
+  /* border: 1px solid white; */
+}
+
+.prompt-container {
+/* border: 1px solid red; */
+width: 90vw;
+max-width: 1000px;
+display: flex;
+padding: 12px 12px 24px 12px;
+justify-content: space-between;
+}
+
+.loading {
+  font-style: italic;
+  align-self: flex-start;
+  margin-top: 12px;
+  flex: 1 0 0;
+  /* border: 1px solid white; */
+}
+
