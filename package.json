@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/validateenv.js && vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "node scripts/validateenv.js && tsc && vite build"
   },
   "dependencies": {
     "@uiw/react-markdown-preview": "^4.1.13",

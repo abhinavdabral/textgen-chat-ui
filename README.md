@@ -6,14 +6,14 @@ An alternative front-end compatible with streaming APIs of [oobabooga/text-gener
 
 While experimenting with `oobabooga/text-generation-webui`, when I finally found a model that was good enough for me, I tried to look for an alternative front-end that's super-basic without any bells and whistles and just works. Failing to find one that fits me needs, I decided to put together something quick and dirty that does the job.
 
-This is good enough to be used internally (among friends and family) without any hassle, any logs, any APIs keys, or anything for the end-users.
+This is good enough to be used internally (among friends and family) without any hassle of authentication, APIs keys, etc. for the end-users.
 
 # How to use?
 
 ### Pre-requisites
 
-- Node
-- Serve or any other static file server
+- Node (+ optionally yarn)
+- `serve` or any other static file server
 - Proxy server (optional)
 
 ### 1. Clone the repository
@@ -22,10 +22,11 @@ This is good enough to be used internally (among friends and family) without any
 git clone https://github.com/abhinavdabral/textgen-chat-ui.git
 ```
 
-### 2. Setup ENV variable
+### 2. Install dependencies and setup env variables
 
 ```shell
 cd textgen-chat-ui
+yarn # or npm i
 cp .env.sample .env
 ```
 
@@ -34,7 +35,7 @@ Edit the `.env` file and put your Text-generation-WebUI's Stream API details the
 ### 3. Build
 
 ```shell
-yarn run build
+yarn build # or num run build
 ```
 
 ### 4. Serve
@@ -60,4 +61,4 @@ The process is standard if you're using this as proxy host (for direct subdomain
 # Contributing
 
 - Pull requests, suggestions and issues are welcomed
-- Idea is to keep this as bare-minimum so anything that adds value in a "barebones" project is welcomed.
+- Idea is to keep this as bare-minimum as possible. So anything that adds value for that limited scope is welcomed.
