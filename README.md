@@ -8,6 +8,8 @@ While experimenting with `oobabooga/text-generation-webui`, when I finally found
 
 This is good enough to be used internally (among friends and family) without any hassle of authentication, APIs keys, etc. for the end-users.
 
+![Screenshot from 2023-07-13 21-25-51](https://github.com/abhinavdabral/textgen-chat-ui/assets/3845088/dc9875f9-2d67-4f40-8f80-902cf7a1aaab)
+
 # How to use?
 
 ### Pre-requisites
